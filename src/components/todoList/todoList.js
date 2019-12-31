@@ -46,6 +46,7 @@ export default class ToDoListContainer extends Component {
 
   addToDo = text => {
     const key = Math.floor(Math.random() * 10000).toString();
+
     this.setState({
       toDoItems: [{ text, key }, ...this.state.toDoItems],
       submitDisabled: true
@@ -61,11 +62,7 @@ export default class ToDoListContainer extends Component {
   updateInput = event => {
     let text = event.target.value.replace(/\s/g, "");
     this.setState({ inputText: event.target.value });
-    if (text) {
-      this.setState({ submitDisabled: false });
-    } else {
-      this.setState({ submitDisabled: true });
-    }
+    text ? this.setState({ submitDisabled: false }) : this.setState({ submitDisabled: true });
   };
 
   handleSubmit = event => {

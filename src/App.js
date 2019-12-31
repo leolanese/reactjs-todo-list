@@ -1,12 +1,12 @@
 import React from "react";
 import ToDoList from "./components/todoList";
-import H2 from "./components/header";
+import Header from "./components/header";
 
 const App = () => {
   return (
     <div>
-      <H2>ReactJS Todo-List</H2>
-      <ToDoList />
+      <Header>ReactJS Todo-List</Header>
+      <ToDoList></ToDoList>
     </div>
   );
 };
